@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mainContainer {
+  background: radial-gradient(
+        134.34% 134.34% at 50% 0%,
+        #1f3757 0%, 
+        #131537 100%
+    );
+}
+
+header {
+  background-color: aqua;
+  margin-top: 0;
+  position:sticky;
+  top: 0;
+}
+
+.containeri {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 75px;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+.container   .brandName {
+  margin: 0;
+}
+
+.getStarted {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
+.register {
+  margin-left: 50px; 
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s;
+  width:100px;
+  height:50px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #fff;
+  background-size: 300% 300%;
+  color: white;
+  box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+  background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
+  transition: 0.5s;
+}
+
+.signIn {
+  margin-left: 50px; 
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s;
+  width:100px;
+  height:50px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #fff;
+  background-size: 300% 300%;
+  color: white;
+  box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+  background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
+  transition: 0.5s;
+}
+
+.hover-effect:hover {
+  background-color: #7a41ffd2;
+  transform: translate3d(0px, -2px, 0px);
+}
+
+footer {
+  position: sticky;
+}
+
+.footer {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: aqua;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+}
+
+@media (max-width:768px) {
+ .wrapper{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+}
+
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.dynamic-txts li{
+  list-style: none;
+  color: #FC6D6D;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color:rgb(26,40,73);
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+/* Register.html */
+.form{
+    padding: 30px;
+
+}
+.form form{
+    margin: 20px;
+    margin-left: 300px;
+    padding: 20px;
+    box-shadow: 1px 1px 16px chartreuse;
+    border-radius: 20px;
+    width: 50%;
+    text-align: center;
+}
+.form form h2{
+    color: chocolate;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+}
+.form form input{
+    width: 70%;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    border-left: 2px solid orangered;
+    
+}
+.form form input:focus{
+    border-left: 2px solid rgba(19, 226, 174, 0.788);
+    border-right: 2px solid rgba(226, 19, 53, 0.788);
+    box-shadow: chartreuse 1px 1px 8px;
+}
+.form form input:hover{
+    border-left: 2px solid rgba(19, 40, 226, 0.788);
+
+}
+.form form select{
+    width: 70%;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    border-left: 2px solid orangered;
+}
+.form form button{
+    /* width: 70%;
+    margin: 10px;
+*/         padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    border-left: 2px solid orangered;
+    border-right: 2px solid orangered;
+    background-color: rgb(184, 221, 18);
+    margin: 30px;
+    box-shadow: 1px 1px 8px black;
+}
+
+
+
+
+
