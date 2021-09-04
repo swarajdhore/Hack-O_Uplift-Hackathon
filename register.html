@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registration form</title>
     <link href="/css/styles.css" rel="stylesheet">
-</head>
+</head> 
 <body>
     <div class="form">
         <form action="/" method="post">
@@ -28,7 +28,7 @@
             </select><br>
             <input type="text" name="college name" id="" placeholder="Enter Your college name"><br>
            <button type="submit" name="submit"> <a href="/home">Register</a></button>
-            <button type="reset"><a href="/register">SignIn</a></button>
+            <button type="reset"><a href="/signIn">SignIn</a></button>
         </form>
     </div>
     <!-- <script type="text/javascript">
@@ -53,9 +53,9 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(redirect => "/home.html")
+                .then(redirect => "/home")
                 .catch(error => console.error('Error!', error.message))
             })
-    </script> -->
+    </script>  -->
 </body>
 </html>

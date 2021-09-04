@@ -4,23 +4,9 @@ const path = require("path");
 
 const app = express();
 
-// const router = express.Router();
-
 app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true}));
-
-// router.get("/", function(request, response) {
-//     response.sendFile(path.join(__dirname + "/index.html"));
-// });
-
-// router.get("/register", function(request, response) {
-//     response.sendFile(path.join(__dirname + "/register.html"));
-// });
-
-
-
-
 
 app.get("/", function(request, response) {
     response.sendFile(__dirname + "/index.html");
@@ -35,9 +21,9 @@ app.get("/home", function(request, response) {
 });
 
 app.post("/register", function(request, response) {
-    response.writeHead(200, {'Content-Type': 'text/html'});
-    let myReadStream = fs.createReadStream(__dirname + "/home.html", "utf8");
-    myReadStream.pipe(response);
+    // response.writeHead(200, {'Content-Type': 'text/html'});
+    // let myReadStream = fs.createReadStream(__dirname + "/home.html", "utf8");
+    // myReadStream.pipe(response);
              ///continue from here
 });
 

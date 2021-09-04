@@ -4,16 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/swarajdhore/Hack-O_Uplift-Hackathon.git"
   },
-  "author": "",
+  "author": "Fantastic Four",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/swarajdhore/Hack-O_Uplift-Hackathon/issues"
   },
-  "homepage": "https://github.com/swarajdhore/Hack-O_Uplift-Hackathon#readme"
+  "homepage": "https://github.com/swarajdhore/Hack-O_Uplift-Hackathon#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "google-spreadsheet": "^3.1.15"
+  }
 }
