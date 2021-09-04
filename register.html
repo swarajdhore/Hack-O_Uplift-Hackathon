@@ -16,10 +16,11 @@
             <span id="errorname" style="color: red;"></span>
             <input type="email" name="email" id="email" placeholder="Enter your email ID" required><br>
             <span id="erroremail" style="color: red;"></span>
+             <input type="password" name="password" id="password" placeholder="Enter Password">
             <input type="number" name="phone_number" id="number" placeholder="Enter Mobile number"><br>
             <span id="errornumber" style="color: red;"></span>
             
-            <select name="year" id="" required>
+            <select name="year" id="year" required>
                 <option value="">YEAR</option>
                 <option value="">1st year</option>
                 <option value="">2nd year</option>
@@ -27,11 +28,11 @@
                 <option value="">4th year</option>
             </select><br>
             <input type="text" name="college name" id="" placeholder="Enter Your college name"><br>
-           <button type="submit" name="submit"> <a href="/home">Register</a></button>
+           <button type="submit" name="submit">Register</button>
             <button type="reset"><a href="/signIn">SignIn</a></button>
         </form>
     </div>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         function validation(){
             var username =  document.getElementById('username').value;
             var email =  document.getElementById('email').value;
@@ -41,21 +42,42 @@
             var emailcheck = /^[A-Za-z 0-9.]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z]{2,6}$/;
             var numbercheck = /^[6789][0-9]{9}$/;
 
-            
+            if (usercheck.test(username)){
+                document.getElementById('errorname').innerHTML = " ";
+            }
+            else{
+                document.getElementById('errorname').innerHTML = "---**Invalid Name**---"
+                return false;
+            }
+            if (emailcheck.test(email)){
+                document.getElementById('erroremail').innerHTML = " ";
+            }
+            else{
+                document.getElementById('erroremail').innerHTML = "---**Invalid Name**---"
+                return false;
+            }
+            if (numbercheck.test(number)){
+                document.getElementById('errornumber').innerHTML = " ";
+            }
+            else{
+                document.getElementById('errornumber').innerHTML = "---**Invalid Name**---"
+                return false;
+            }
+
         }
 
 
     </script>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzPd38OmvnrGB6mA5aGo_xbtw5UcDXBqDXWBzA4uewjpSsrYDV2v3igCBmQJDTwAgCA_A/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwuz5-sJlTCvaVglP-yPY2901KPHpIoWrTnzAnr-XERabzav1jSkNDRMFEs4ZwVaDT0/exec'
             const form = document.forms['report-me']
           
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(redirect => "/home")
+                .then(response => alert("Thank you .. .somesh will call you soon"))
                 .catch(error => console.error('Error!', error.message))
             })
-    </script>  -->
+    </script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 const express  = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const drum = require(__dirname + "/drum.js");
 
 const app = express();
 
@@ -18,6 +19,10 @@ app.get("/register", function(request, response) {
 
 app.get("/home", function(request, response) {
     response.sendFile(__dirname + "/home.html");
+});
+
+app.get("/drum", function(request, response) {
+    response.sendFile(__dirname + "/drum.html");
 });
 
 app.post("/register", function(request, response) {
